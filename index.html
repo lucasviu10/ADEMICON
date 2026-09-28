@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Follow-up do Lucas</title>
+  <meta name="theme-color" content="#0b6b3a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Follow-up">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1 id="titulo">Hoje</h1>
+    <span id="data-hoje" class="topo-data"></span>
+  </header>
+
+  <main id="conteudo"></main>
+
+  <button id="btn-novo" class="fab" aria-label="Novo cliente">+</button>
+
+  <nav class="abas">
+    <button data-aba="hoje" class="ativa"><span class="ic">📅</span>Hoje</button>
+    <button data-aba="clientes"><span class="ic">👥</span>Clientes</button>
+    <button data-aba="config"><span class="ic">⚙️</span>Ajustes</button>
+  </nav>
+
+  <dialog id="modal"><div id="modal-corpo"></div></dialog>
+  <div id="aviso" class="aviso" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
