@@ -36,3 +36,7 @@ App de celular que mostra, todo dia, quem chamar depois da proposta e abre o Wha
 | `style.css` | Visual |
 | `manifest.webmanifest`, `icon*` | Instalação na tela inicial |
 | `sw.js` | Faz o app abrir mesmo sem internet |
+
+## Agente Prospector (prospecção de lead frio)
+
+Na pasta `agente-prospeccao/` estão as instruções prontas para montar um agente de IA no Claude (ou ChatGPT) focado em prospecção de lead frio: mensagens, roteiros de ligação, perfis-alvo, canais, indicadores e meta reversa. Comece por `agente-prospeccao/0-COMO-USAR.md`.
