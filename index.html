@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Follow-up do Lucas</title>
-  <meta name="theme-color" content="#0b6b3a">
+  <title>Central do Lucas</title>
+  <meta name="theme-color" content="#f4f4f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#151a1b" media="(prefers-color-scheme: dark)">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="Follow-up">
+  <meta name="apple-mobile-web-app-title" content="Central">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -14,24 +15,51 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topo">
-    <h1 id="titulo">Hoje</h1>
-    <span id="data-hoje" class="topo-data"></span>
-  </header>
+  <div class="app">
+    <aside class="lateral">
+      <div class="marca">
+        <img src="icon.svg" alt="" width="36" height="36">
+        <div><b>Central do Lucas</b><span>Vendas · dinheiro · rotina</span></div>
+      </div>
+      <nav class="menu" id="menu">
+        <button data-aba="painel"><span class="ic">📊</span><span>Painel</span></button>
+        <button data-aba="hoje"><span class="ic">📅</span><span>Hoje</span></button>
+        <button data-aba="leads"><span class="ic">👥</span><span>Leads</span></button>
+        <button data-aba="prospeccao"><span class="ic">🎯</span><span>Prospecção</span></button>
+        <button data-aba="financas"><span class="ic">💰</span><span>Finanças</span></button>
+        <button data-aba="pessoal"><span class="ic">🌱</span><span>Pessoal</span></button>
+        <button data-aba="arquivos"><span class="ic">📎</span><span>Arquivos</span></button>
+        <button data-aba="ajustes"><span class="ic">⚙️</span><span>Ajustes</span></button>
+      </nav>
+    </aside>
 
-  <main id="conteudo"></main>
+    <div class="principal">
+      <header class="topo">
+        <div>
+          <h1 id="titulo">Painel</h1>
+          <span id="data-hoje" class="topo-data"></span>
+        </div>
+        <button id="pomo-mini" class="pomo-mini" data-ir="prospeccao" hidden></button>
+      </header>
 
-  <button id="btn-novo" class="fab" aria-label="Novo cliente">+</button>
+      <section class="assistente" aria-label="Assistente">
+        <form id="form-ia" autocomplete="off">
+          <textarea id="ia-texto" rows="1" placeholder="Digite aqui..."></textarea>
+          <button type="button" id="ia-mic" class="btn-icone" aria-label="Falar em vez de digitar" hidden>🎤</button>
+          <button type="submit" class="btn-verde">✨ Organizar</button>
+        </form>
+        <div class="dica">Ex.: <i>Maria 13 99123-4567 quer casa 300 mil, Nestlé, chamar sexta</i> · <i>gastei 40 de gasolina</i> · <i>fiz 30 abordagens</i>. Vários de uma vez: um por linha.</div>
+      </section>
 
-  <nav class="abas">
-    <button data-aba="hoje" class="ativa"><span class="ic">📅</span>Hoje</button>
-    <button data-aba="clientes"><span class="ic">👥</span>Clientes</button>
-    <button data-aba="config"><span class="ic">⚙️</span>Ajustes</button>
-  </nav>
+      <main id="conteudo"></main>
+    </div>
+  </div>
 
   <dialog id="modal"><div id="modal-corpo"></div></dialog>
   <div id="aviso" class="aviso" hidden></div>
 
   <script src="app.js"></script>
+  <script src="assistente.js"></script>
+  <script src="modulos.js"></script>
 </body>
 </html>
