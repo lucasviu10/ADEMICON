@@ -1,7 +1,7 @@
 // Guarda o app no celular para abrir rápido e funcionar sem internet.
 // Ao mudar qualquer arquivo, aumente o número da versão abaixo.
-const VERSAO = 'followup-v1';
-const ARQUIVOS = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest', 'icon.svg', 'icon-192.png', 'icon-512.png'];
+const VERSAO = 'central-v2';
+const ARQUIVOS = ['./', 'index.html', 'style.css', 'app.js', 'assistente.js', 'modulos.js', 'manifest.webmanifest', 'icon.svg', 'icon-192.png', 'icon-512.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSAO).then(c => c.addAll(ARQUIVOS)).then(() => self.skipWaiting()));
